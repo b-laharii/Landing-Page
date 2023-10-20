@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Landing page</title>
+    <style>
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                padding-bottom: 50px;
+            }
+
+            .logo {
+                font-size: 40px;
+            }
+
+            .book {
+                top: 10%;
+            }
+
+
+        }
+
+        @media (min-width: 769px) {
+            .logo {
+                font-size: 55px;
+            }
+
+            .book {
+                top: 50%;
+            }
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        header {
+            background: linear-gradient(rgba(9, 9, 9, 0.7), rgba(9, 9, 9, 0.2)), url('travel.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            padding-bottom: 200px;
+        }
+
+        nav {
+            display: flex;
+            text-align: right;
+            justify-content: space-around;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .link {
+            position: relative;
+            color: beige;
+            text-decoration: none;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .link:hover {
+            text-decoration: none;
+            transition: ease;
+            color: palevioletred;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+    
+        .logo {
+            font-size: 55px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            letter-spacing: 4px;
+            text-decoration: underline 1px;
+            text-decoration-style: double;
+        }
+
+        .book {
+            max-width: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            letter-spacing: 4px;
+            padding-bottom: 10px;
+            padding-top: 90px;
+        }
+
+        .book span {
+            letter-spacing: 6px;
+        }
+
+
+        .about {
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 100px;
+            padding-bottom: 300px;
+            letter-spacing: 1px;
+        }
+       h1{
+        font-size: 40px;
+       }
+
+        .booknow {
+            color: black;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: beige;
+            border-radius: 9px;
+            transition: background-color 0.3s, transform 0.2s ease;
+            display: inline-block;
+            padding: 10px 20px;
+
+        }
+
+        .booknow:hover {
+            background-color: palevioletred;
+            color: white;
+            transform: scale(1.1);
+            text-decoration: none;
+        }
+
+        .us {
+            color: palevioletred;
+        }
+
+        .img1 {
+            float: right;
+            width: 600px;
+            padding-left: 60px;
+            padding-bottom: 100px;
+        }
+
+
+
+        #gallery {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 25px;
+            padding-bottom: 200px;
+        }
+
+        .image {
+            position: relative;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s;
+            height: auto;
+            margin: 10px;
+            transition: transform 0.5s ease-in-out;
+            margin-top: 50px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .country-name {
+            margin-top: 2px;
+            color: blueviolet;
+        }
+
+        .image:hover {
+            transform: scale(2.7);
+        }
+
+        h2 {
+            color: palevioletred;
+        }
+
+        .india,
+        .norway,
+        .japan,
+        .italy,
+        .paris,
+        .singapore,
+        .dubai {
+            font-size: medium;
+            padding-left: 80px;
+            padding-right: 80px;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+        }
+
+        a.explore {
+            color: black;
+            text-decoration: none;
+            background: palevioletred;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.2s ease;
+            display: inline-block;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        a.explore:hover {
+            background-color: palevioletred;
+            color: white;
+            transform: scale(1.1);
+            text-decoration: none;
+        }
+
+
+
+        .our {
+            padding-top: 150px;
+            padding-left: 80px;
+        }
+
+        ul {
+            padding-left: 80px;
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+
+        .service {
+            background: url('service.jpeg');
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            padding-bottom: 90px;
+            letter-spacing: 1px;
+        }
+
+        span {
+            font-size: 24px;
+            color: rgb(131, 11, 75);
+        }
+
+        .email,
+        .insta,
+        .phone {
+            width: 30px;
+            padding: 10px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .faqs {
+            padding-left: 70px;
+            margin-top: 200px;
+        }
+
+        .faq1,
+        .faq2 {
+            margin-bottom: 20px;
+        }
+
+        .faq1 h3,
+        .faq2 h3 {
+            font-size: 18px;
+            color: #000000;
+        }
+
+        .faq1,
+        .faq2 p {
+            font-size: 16px;
+            color: #424040;
+        }
+       .askq{
+        border-radius: 2px;
+        background-color:rgb(245, 228, 231);
+        text-align: center;
+        letter-spacing: 1px;
+       }
+       .asksubmit{
+        border-radius: 6px;
+        letter-spacing: 1px;
+       }
+        footer {
+            background: pink;
+            color: #000000;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Travel FUN</div>
+        <nav>
+            <a href="#home" class="link">Home</a>
+            <a href="#about" class="link"> About</a>
+            <a href="#gallery" class="link">Gallery</a>
+            <a href="#service" class="link"> service</a>
+            <a href="#FAQ's" class="link">FAQ's</a>
+            <a href="#contact" class="link"> Contact</a>
+        </nav>
+        <section class="book" id="home">
+            Welcome
+            <h1>Travel FUN</h1><br>
+            Get started<br><br>
+            <a href="/register.html" class="booknow">Book Now</a>
+        </section>
+    </header><br>
+
+    <section class="about" id="about">
+        <img src="about.jpg" class="img1" alt="travel"></a>
+        <h2 class="us">About Us</h2>
+        <p>we are passionate about making your travel dreams a reality. We understand that every journey is an
+            opportunity to explore, connect, and create lasting memories. Our mission is to provide you with exceptional
+            travel experiences that leave you with a sense of wonder, adventure, and fulfillment.</p>
+        <p>We believe that no two travelers are alike, and we take pride in tailoring each trip to your specific desires
+            and preferences. Our dedicated team of travel experts works tirelessly to create customized itineraries that
+            suit your individual needs.</p>
+        <p>We believe that quality travel experiences need not come with a hefty price tag. We work hard to provide you
+            with exceptional value for your investment, ensuring you get the most out of every adventure.</p>
+    </section>
+
+    <br>
+
+    <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+
+
+        <img src="india.jpg" class="image" alt="india">
+        <p class="country-name">India:</p>
+        <p class="india"> India, a land of vibrant culture and rich heritage, beckons you with its breathtaking
+            landscapes, ancient history, and diverse traditions. Explore the iconic Taj Mahal, savor the flavors of
+            aromatic spices, and witness the spiritual serenity of the Ganges River. Let us guide you through this
+            extraordinary journey of colors, spirituality, and extraordinary experiences. Your adventure in India
+            awaits.</p>
+        <img src="norway.jpeg" class="image" alt="norway">
+        <p class="country-name">Norway:</p>
+        <p class="norway">
+            Discover the captivating landscapes of Norway, where breathtaking fjords, snow-capped mountains, and
+            pristine lakes create a natural paradise. Immerse yourself in the vibrant culture of charming towns and
+            enjoy outdoor adventures like hiking and northern lights viewing. Experience the magic of the Midnight
+            Sun in summer and the ethereal beauty of the Northern Lights in winter. Norway offers an unforgettable
+            journey for all seasons.</p>
+        <img src="japan.jpeg" class="image" alt="japan">
+        <p class="country-name">Japan:</p>
+        <p class="japan">
+            Immerse yourself in the Land of the Rising Sun, where ancient traditions harmonize with cutting-edge
+            technology. Explore historic temples, savor world-class cuisine, and witness the breathtaking beauty of
+            cherry blossoms in spring. Japan's rich culture and natural wonders await your journey.
+        </p>
+        <img src="italy.jpeg" class="image" alt="italy">
+        <p class="country-name">Italy:</p>
+        <p class="italy">
+            Italy, a captivating blend of history and natural wonders, awaits your exploration. From the grandeur of
+            Rome's ancient architecture to the romantic canals of Venice, experience the heart of art, culture, and
+            gastronomy. Dive into the birthplace of Renaissance, indulge in mouthwatering cuisine, and stroll
+            through picturesque villages. Italy, a dream come true.
+        </p>
+        <img src="paris.jpeg" class="image" alt="paris">
+        <p class="country-name">Paris:</p>
+        <p class="paris">
+            Discover the enchanting City of Light, where romance and history unite. From the iconic Eiffel Tower to
+            world-class art at the Louvre, Paris beckons with its timeless allure. Savor gourmet cuisine, stroll
+            along the Seine, and immerse yourself in a city that embodies elegance and culture. Your unforgettable
+            Parisian adventure awaits.
+        </p>
+        <img src="singapore.jpg" class="image" alt="singapore">
+        <p class="country-name">singapore:</p>
+        <p class="singapore">Discover a harmonious blend of modernity and tradition in the vibrant city of
+            Singapore. Explore iconic landmarks like Marina Bay Sands, savor diverse culinary delights at hawker
+            centers, and stroll through lush botanical gardens. Immerse yourself in the unique cultural tapestry of
+            this dynamic island nation. Singapore awaits your unforgettable adventure.</p>
+        <img src="dubai.jpg" class="image" alt="dubai">
+        <p class="country-name">Dubai:</p>
+        <p class="dubai">
+            Discover the epitome of modern luxury and rich tradition in Dubai. Explore iconic skyscrapers, shop in
+            opulent malls, and indulge in gourmet dining. Unwind on pristine beaches, and witness the blend of
+            ancient heritage and futuristic innovation. Your unforgettable adventure awaits in the heart of the
+            Arabian Gulf.
+        </p>
+        <a href="/explore.html" class="explore">explore more</a>
+    </section>
+
+    <section class="service" id="service">
+        <h2 class="our">OUR SERVICES</h2>
+        <ul>
+            <li><span>Group Tours:</span> Join like-minded travelers on our carefully curated group tours. Experience
+                the camaraderie
+                of fellow explorers as you embark on memorable adventures.</li><br>
+            <li><span>Scheduled Departures:</span> Join one of our pre-planned group tours where you can share your
+                adventures with
+                fellow travelers who share your passion for exploration. These tours cover a wide range of destinations
+                and themes, ensuring a diverse and enriching experience.</li><br>
+            <li><span>Professional Guides:</span> Our expert tour guides are not just knowledgeable about the
+                destinations but also
+                skilled in creating a seamless and enjoyable group travel experience. They will enrich your journey with
+                historical and cultural insights.</li><br>
+            <li><span>Private Escapes:</span> For those seeking a more intimate and exclusive experience, our private
+                escapes are
+                perfect. Tailor your trip to your exact preferences and travel at your own pace.</li><br>
+            <li><span>Itineraries:</span> Have a specific destination or experience in mind? Let us create a unique and
+                personalized itinerary just for you.</li><br>
+            <li><span> Travel:</span> Whether it's a honeymoon, a family reunion, or a corporate retreat, we can design
+                specialized travel experiences to suit your requirements.</li>
+        </ul>
+    </section>
+    <section class="FAQ's" id="FAQ's">
+        <section class="faqs" id="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq1">
+                <h3>Question 1: What is the cost of your tours?</h3>
+                <p>Answer 1: The cost of our tours varies depending on the destination, duration, and the type of tour.
+                    </p>
+            </div>
+            <div class="faq2">
+                <h3>Question 2: How do I make a reservation?</h3>
+                <p>Answer 2: You can make a reservation by contacting us through email, phone, or by filling out our
+                    online booking form.</p>
+                </div>
+                    <div class="ask">
+                 <h2>Ask Question</h2>
+                 <input type="text" placeholder="ask a question" class="askq">
+                 <input type="submit" class="asksubmit">
+                    </div>
+           
+        </section>
+        <section class="contact" id="contact">
+            <a href="mailto:bxlahari@gmail.com" target="_blank"><img src="email.png" class="email"></a>
+            <a href="@travelFun" target="_blank"><img src="instagram.png" class="insta"></a>
+            <a href="contact:0000000000" target="_blank"><img src="phone-call.png" class="phone"></a>
+        </section>
+
+
+    </section>
+    <footer>
+        <p>&copy; 2023 Travel FUN. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
